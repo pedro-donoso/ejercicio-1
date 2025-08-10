@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>EcoExpress</title>
+</head>
+<body>
+    <div>
+        <h1>Bienvenido a ECOEXPRESS</h1>
+        
+        <h2>Materiales Aceptados</h2>
+        <ul>
+            <li>Cartón: $10 por kg</li>
+            <li>Vidrio: $8 por kg</li>
+            <li>Plástico: $12 por kg</li>
+            <li>Electrónicos: $20 por unidad</li>
+        </ul>
+
+        <h2>Agendar Retiro</h2>
+        <div class="container">
+          <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Tu dirección" required>
+
+            <label for="material">Material:</label>
+            <select id="material" name="material">
+                <option value="carton">Cartón</option>
+                <option value="vidrio">Vidrio</option>
+                <option value="plastico">Plástico</option>
+                <option value="electronicos">Electrónicos</option>
+            </select>
+
+            <button type="submit">Agendar</button>
+        </form>  
+        </div>
+        
+
+        <footer>
+            <p>© 2025 ECOEXPRESS. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
