@@ -130,3 +130,20 @@ body {
       object-fit: cover;
     }
 
+    .button-logout {
+    background-color: #f44336; /* Rojo estándar */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  /* Cambio de color al pasar el cursor */
+  .button-logout:hover {
+    background-color: #ff9500; /* Rojo más oscuro */
+    cursor: pointer;
+  }
+      
+  
+
