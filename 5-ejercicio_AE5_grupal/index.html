@@ -1,11 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LibroLibre - Catálogo de libros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <h1>PENDIENTE POR REALIZAR</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#catalogo">LibroLibre</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#catalogo">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registro">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <section id="catalogo" class="py-4">
+            <h1 class="mb-4 border-bottom pb-2">Catálogo de libros</h1>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form id="search-form" class="row g-3">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="search-input" placeholder="Buscar por título, autor o género">
+                        </div>
+                        <div class="col-md-2">
+                            <select id="search-type" class="form-select">
+                                <option value="all">Todos</option>
+                                <option value="title">Título</option>
+                                <option value="author">Autor</option>
+                                <option value="genre">Género</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="books-container">
+                <div class="card mb-3 book" data-title="el principito" data-author="antoine de saint-exupéry" data-genre="ficción">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary">El Principito</h2>
+                        <p class="card-text"><strong>Autor:</strong> Antoine de Saint-Exupéry</p>
+                        <p class="card-text"><strong>Género:</strong> <span class="badge bg-success">Ficción</span></p>
+                        <p class="card-text">Una historia poética sobre un pequeño príncipe y sus viajes.</p>
+                    </div>
+                </div>
+                
+                <div class="card mb-3 book" data-title="clean code" data-author="robert c. martin" data-genre="programación">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary">Clean Code</h2>
+                        <p class="card-text"><strong>Autor:</strong> Robert C. Martin</p>
+                        <p class="card-text"><strong>Género:</strong> <span class="badge bg-success">Programación</span></p>
+                        <p class="card-text">Una guía para escribir código limpio y mantenible.</p>
+                    </div>
+                </div>
+                
+                <div class="card mb-3 book" data-title="cien años de soledad" data-author="gabriel garcía márquez" data-genre="realismo mágico">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary">Cien Años de Soledad</h2>
+                        <p class="card-text"><strong>Autor:</strong> Gabriel García Márquez</p>
+                        <p class="card-text"><strong>Género:</strong> <span class="badge bg-success">Realismo mágico</span></p>
+                        <p class="card-text">Una saga familiar ambientada en el mítico pueblo de Macondo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="registro" class="py-4" style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Registro de usuarios</h2>
+                    <form id="register-form">
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="fullname" required>
+                            <div class="invalid-feedback">Por favor ingresa tu nombre completo</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">Por favor ingresa un correo válido</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" required>
+                                <button class="btn btn-outline-secondary toggle-password" type="button">Mostrar</button>
+                            </div>
+                            <div class="password-strength mt-2"></div>
+                            <div class="invalid-feedback">La contraseña debe tener al menos 8 caracteres, una mayúscula y un número</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section id="sobre-nosotros" class="py-4" style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title mb-4">Sobre Nosotros</h2>
+                    <p class="card-text">LibroLibre es una biblioteca digital creada por tres entusiastas de la lectura con el objetivo de facilitar el acceso a libros electrónicos y audiolibros de manera simple y eficiente.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">2025 LibroLibre. Sin derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
