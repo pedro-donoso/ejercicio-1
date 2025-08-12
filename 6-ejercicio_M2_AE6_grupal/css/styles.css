@@ -1,0 +1,119 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.cineflash-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.cineflash-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.movie-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.movie-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #212529;
+}
+
+.director {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #6c757d;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.release-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.movie-poster {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.duna-poster {
+    background-image: url('../images/duna.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.barbie-poster {
+    background-image: url('../images/Barbie.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.oppenheimer-poster {
+    background-image: url('../images/Oppenheimer.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.btn-reservar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #c82333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cineflash-title {
+        font-size: 2rem;
+    }
+    
+    .movies-container {
+        grid-template-columns: 1fr;
+    }
+}
