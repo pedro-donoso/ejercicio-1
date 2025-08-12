@@ -67,6 +67,11 @@ body {
     height: 400px;
     background-size: cover;
     background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.movie-poster:hover {
+    transform: scale(1.03);
 }
 
 .duna-poster {
@@ -116,4 +121,23 @@ body {
     .movies-container {
         grid-template-columns: 1fr;
     }
+}
+
+/* Agrega estos estilos al final de tu archivo CSS */
+#reservaModal .modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#reservaModal .modal-header {
+    background-color: #dc3545;
+    color: white;
+}
+
+#reservaModal .modal-body {
+    padding: 0;
+}
+
+#formularioReservaContainer {
+    padding: 20px;
 }
