@@ -27,3 +27,18 @@ h2 {
 h3 {
     color: #2c3e50;
 }
+
+.section {
+    margin-bottom: 30px;
+}
+
+.service {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+}
+
+hr {
+    border: 0;
+}
