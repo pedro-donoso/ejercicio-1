@@ -1,68 +1,84 @@
+/* Estilos generales */
 body {
     background-color: #f8f9fa;
     font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Contenedor principal */
 .cineflash-container {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Encabezado */
 .cineflash-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #343a40;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #212529;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 
+.cineflash-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de películas */
 .movies-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    justify-content: center;
     gap: 30px;
-    padding: 20px 0;
+    width: 100%;
+    padding: 10px 0;
 }
 
+/* Tarjetas de película */
 .movie-card {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .movie-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Encabezado de tarjeta */
 .movie-header {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
 .movie-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #212529;
-}
-
-.director {
     font-size: 1rem;
-    font-weight: bold;
-    color: #6c757d;
+    font-weight: 700;
+    color: #212529;
     margin-bottom: 5px;
-    text-transform: uppercase;
 }
 
 .release-date {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #6c757d;
-    margin-top: 5px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
+/* Póster de película */
 .movie-poster {
     height: 400px;
     background-size: cover;
@@ -75,57 +91,41 @@ body {
 }
 
 .duna-poster {
-    background-image: url('../images/duna.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-}
-
-.barbie-poster {
-    background-image: url('../images/Barbie.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+    background-image: url('../images/dune2.jpeg');
 }
 
 .oppenheimer-poster {
-    background-image: url('../images/Oppenheimer.jpeg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+    background-image: url('../images/oppenheimer.jpeg');
 }
 
+.barbie-poster {
+    background-image: url('../images/barbie.jpg');
+}
+
+/* Botón de reserva */
 .btn-reservar {
     display: block;
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     background-color: #dc3545;
     color: white;
     border: none;
-    border-radius: 0;
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
-    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    margin-top: auto;
 }
 
 .btn-reservar:hover {
     background-color: #c82333;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .cineflash-title {
-        font-size: 2rem;
-    }
-    
-    .movies-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Agrega estos estilos al final de tu archivo CSS */
+/* Modal de reserva */
 #reservaModal .modal-content {
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -135,9 +135,43 @@ body {
 }
 
 #reservaModal .modal-body {
-    padding: 0;
+    padding: 2;
 }
 
-#formularioReservaContainer {
-    padding: 20px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cineflash-title {
+        font-size: 2rem;
+    }
+    
+    .cineflash-subtitle {
+        font-size: 1rem;
+    }
+    
+    .movies-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .movie-poster {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cineflash-container {
+        padding: 20px 15px;
+    }
+    
+    .cineflash-title {
+        font-size: 1.8rem;
+    }
+    
+    .movie-poster {
+        height: 300px;
+    }
+    
+    .btn-reservar {
+        padding: 12px;
+    }
 }

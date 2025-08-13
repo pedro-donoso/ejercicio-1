@@ -5,29 +5,28 @@ body {
 
 .cineflash-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    margin: 1 auto;
+    padding: 1 15px;
 }
 
 .cineflash-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #343a40;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
 }
 
 .reserva-form {
     background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 1.5rem;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .resumen-reserva {
     position: sticky;
-    top: 20px;
+    top: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -37,16 +36,16 @@ body {
 
 .resumen-item strong {
     display: inline-block;
-    width: 120px;
+    width: 100px;
 }
 
 .form-label {
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 #tarjeta {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 /* Efectos y transiciones */
@@ -68,11 +67,11 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .cineflash-title {
-        font-size: 2rem;
+        font-size: 1rem;
     }
     
     .resumen-reserva {
-        margin-top: 2rem;
+        margin-top: 1rem;
         position: static;
     }
 }
