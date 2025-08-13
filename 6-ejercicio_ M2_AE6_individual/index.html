@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes con jQuery</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Galería de Imágenes</h1>
+    
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <img src="https://picsum.photos/id/10/200/200" alt="Imagen 1" class="thumbnail" id="img1" data-full="https://picsum.photos/id/10/800/600">
+            <img src="https://picsum.photos/id/11/200/200" alt="Imagen 2" class="thumbnail" id="img2" data-full="https://picsum.photos/id/11/800/600">
+            <img src="https://picsum.photos/id/12/200/200" alt="Imagen 3" class="thumbnail" id="img3" data-full="https://picsum.photos/id/12/800/600">
+            <img src="https://picsum.photos/id/13/200/200" alt="Imagen 4" class="thumbnail" id="img4" data-full="https://picsum.photos/id/13/800/600">
+            <img src="https://picsum.photos/id/14/200/200" alt="Imagen 5" class="thumbnail" id="img5" data-full="https://picsum.photos/id/14/800/600">
+        </div>
+    </div>
+
+<div class="modal" id="imageModal">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <div class="modal-content">
+        <img src="" alt="" id="modalImage">
+        <div class="navigation-btns">
+            <button id="prevBtn">Anterior</button>
+            <button id="nextBtn">Siguiente</button>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
