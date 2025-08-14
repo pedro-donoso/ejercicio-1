@@ -47,11 +47,11 @@
         </div>
 
         <div class="section mb-4 p-4 bg-white rounded shadow-sm">
-            <h2>Solicitar Reparación</h2>
+            <h2 class="mb-4">Solicitar Reparación</h2>
             <form>
-                <div class="form-group">
-                    <label for="service">Tipo de Reparación</label>
-                    <select id="service">
+                <div class="mb-3">
+                    <label for="service" class="form-label">Tipo de Reparación</label>
+                    <select class="form-select" id="service">
                         <option value="" disabled selected>Selecciona un servicio</option>
                         <option value="oil">Cambio de aceite</option>
                         <option value="brakes">Revisión de frenos</option>
@@ -59,19 +59,19 @@
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <label for="description">Descripción</label>
-                    <textarea id="description"></textarea>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="description" rows="3"></textarea>
                 </div>
 
-                <div class="form-group">
-                    <label for="date">Agendar Cita</label>
-                    <input type="text" id="date" placeholder="dd/mm/yyyy, --:--">
+                <div class="mb-3">
+                    <label for="date" class="form-label">Agendar Cita</label>
+                    <input type="text" class="form-control" id="date" placeholder="dd/mm/yyyy, --:--">
                 </div>
             </form>
         </div>
 
-        <hr>
+        <hr class="my-4">
 
         <div class="section">
             <h3>Información de Pago</h3>
