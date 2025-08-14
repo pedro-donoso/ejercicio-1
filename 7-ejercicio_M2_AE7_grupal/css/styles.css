@@ -82,3 +82,10 @@ textarea {
     width: 100%;
 }
 
+.confirm-btn:hover {
+    background-color: #2980b9;
+}
+
+select {
+    height: 35px;
+}
