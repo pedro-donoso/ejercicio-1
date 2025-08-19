@@ -23,6 +23,10 @@ body{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.card-title {
+    color: #0d6efd;
+}
+
 h1 {
     color: #2c3e50;
     text-align: center;
@@ -83,7 +87,7 @@ textarea {
 }
 
 .confirm-btn {
-    background-color: #3498db;
+    background-color: #0d6efd;
     color: white;
     border: none;
     padding: 10px 20px;
