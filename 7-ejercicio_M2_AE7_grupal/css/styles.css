@@ -24,7 +24,8 @@ body{
 }
 
 .service-img {
-    height: 120px;
+    height: 15rem;
+    width: 15rem;
     object-fit: contain;
     margin-bottom: 15px;
 }
