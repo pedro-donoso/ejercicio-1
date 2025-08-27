@@ -9,26 +9,77 @@ function showSection(sectionName, clickedElement) {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.classList.remove('bg-red-500');
-        link.classList.add('hover:bg-cyan-500');
     });
 
     if (clickedElement) {
         clickedElement.classList.add('bg-red-500');
-        clickedElement.classList.remove('hover:bg-cyan-500');
     }
 
-    document.getElementById('mobile-menu').classList.add('hidden');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu) {
+        mobileMenu.classList.add('hidden');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden');
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            let sectionName;
+            const linkText = this.textContent.trim();
+
+            if (linkText === 'Inicio') {
+                sectionName = 'inicio';
+            } else if (linkText === 'Amenazas Comunes') {
+                sectionName = 'amenazas';
+            } else if (linkText === 'Consejos de Seguridad') {
+                sectionName = 'consejos';
+            }
+
+            if (sectionName) {
+                showSection(sectionName, this);
+            }
+        });
     });
 
     document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.add('hidden');
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            let sectionName;
+            const linkText = this.textContent.trim();
+
+            if (linkText === 'Inicio') {
+                sectionName = 'inicio';
+            } else if (linkText === 'Amenazas Comunes') {
+                sectionName = 'amenazas';
+            } else if (linkText === 'Consejos de Seguridad') {
+                sectionName = 'consejos';
+            }
+
+            if (sectionName) {
+                showSection(sectionName, null);
+
+                const desktopLinks = document.querySelectorAll('.nav-link');
+                desktopLinks.forEach(desktopLink => {
+                    if (desktopLink.textContent.trim() === linkText) {
+                        desktopLink.classList.add('bg-red-500');
+                    }
+                });
+            }
         });
     });
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+        });
+    }
 });
+
