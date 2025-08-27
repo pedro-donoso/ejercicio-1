@@ -26,7 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.toggle('hidden');
     });
 
-    
-
-
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    });
 });
